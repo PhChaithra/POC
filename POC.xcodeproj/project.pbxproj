@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		72C8DC0924A3D7360015B648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C8DC0724A3D7360015B648 /* Main.storyboard */; };
 		72C8DC0B24A3D7370015B648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C8DC0A24A3D7370015B648 /* Assets.xcassets */; };
 		72C8DC0E24A3D7370015B648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C8DC0C24A3D7370015B648 /* LaunchScreen.storyboard */; };
+		72C8DC1824A4A0090015B648 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C8DC1724A4A0090015B648 /* DataLoader.swift */; };
+		72C8DC1A24A4A5910015B648 /* DisplayDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C8DC1924A4A5910015B648 /* DisplayDetails.swift */; };
+		72C8DC1C24A4A5F30015B648 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C8DC1B24A4A5F30015B648 /* Content.swift */; };
 		A5C891F04337B217346862EF /* Pods_POC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624257FB681C97C1C9CD31B9 /* Pods_POC.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,9 @@
 		72C8DC0A24A3D7370015B648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72C8DC0D24A3D7370015B648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72C8DC0F24A3D7370015B648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72C8DC1724A4A0090015B648 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		72C8DC1924A4A5910015B648 /* DisplayDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDetails.swift; sourceTree = "<group>"; };
+		72C8DC1B24A4A5F30015B648 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Content.swift; path = POC/Model/Content.swift; sourceTree = SOURCE_ROOT; };
 		B56FEDA0B0457B9534EF8289 /* Pods-POC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POC.release.xcconfig"; path = "Target Support Files/Pods-POC/Pods-POC.release.xcconfig"; sourceTree = "<group>"; };
 		FF81EB27E9DF39FC99A52B3C /* Pods-POC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POC.debug.xcconfig"; path = "Target Support Files/Pods-POC/Pods-POC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,15 +77,34 @@
 		72C8DC0024A3D7360015B648 /* POC */ = {
 			isa = PBXGroup;
 			children = (
+				72C8DC1624A3DA6A0015B648 /* Controller */,
+				72C8DC1524A3DA400015B648 /* Model */,
 				72C8DC0124A3D7360015B648 /* AppDelegate.swift */,
 				72C8DC0324A3D7360015B648 /* SceneDelegate.swift */,
-				72C8DC0524A3D7360015B648 /* ViewController.swift */,
 				72C8DC0724A3D7360015B648 /* Main.storyboard */,
 				72C8DC0A24A3D7370015B648 /* Assets.xcassets */,
 				72C8DC0C24A3D7370015B648 /* LaunchScreen.storyboard */,
 				72C8DC0F24A3D7370015B648 /* Info.plist */,
+				72C8DC1724A4A0090015B648 /* DataLoader.swift */,
 			);
 			path = POC;
+			sourceTree = "<group>";
+		};
+		72C8DC1524A3DA400015B648 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72C8DC1B24A4A5F30015B648 /* Content.swift */,
+				72C8DC1924A4A5910015B648 /* DisplayDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72C8DC1624A3DA6A0015B648 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				72C8DC0524A3D7360015B648 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		886BF615AD104828F4F6BB0A /* Pods */ = {
@@ -88,7 +113,6 @@
 				FF81EB27E9DF39FC99A52B3C /* Pods-POC.debug.xcconfig */,
 				B56FEDA0B0457B9534EF8289 /* Pods-POC.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,9 +231,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C8DC1824A4A0090015B648 /* DataLoader.swift in Sources */,
 				72C8DC0624A3D7360015B648 /* ViewController.swift in Sources */,
 				72C8DC0224A3D7360015B648 /* AppDelegate.swift in Sources */,
+				72C8DC1A24A4A5910015B648 /* DisplayDetails.swift in Sources */,
 				72C8DC0424A3D7360015B648 /* SceneDelegate.swift in Sources */,
+				72C8DC1C24A4A5F30015B648 /* Content.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
