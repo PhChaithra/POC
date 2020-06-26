@@ -20,7 +20,7 @@ final class DataLoader:NSObject {
     {
         
     }
-    func loadContentFrom(url:String,completionHandler: @escaping(_ success:Bool)-> ())
+    func loadContentFrom(url:String,completionHandler: @escaping(Bool, NSError?)-> ())
     {
         
         AF.request(url).responseData{ response in
@@ -40,11 +40,11 @@ final class DataLoader:NSObject {
                         }
                         
                         self.deSerialize(json: json)
-                    completionHandler( true)
+                        completionHandler( true,nil)
                         
                     case .failure(let error):
                         
-                        print(error)
+                        completionHandler( false,error as NSError)
                 }
             }
             
@@ -59,6 +59,7 @@ final class DataLoader:NSObject {
         let descriptions = json["rows"].arrayValue.map{$0["description"].string}
         let imageUrls = json["rows"].arrayValue.map{$0["imageHref"].string}
          let count = titles.count
+        self.contents.removeAll()
         for index in 0..<count {
             var title:String = ""
             var url: String = ""

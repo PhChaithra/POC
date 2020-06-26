@@ -14,10 +14,35 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="EN7-yO-fN3">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="yyv-kN-iEo"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0eq-ya-Zqg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EN7-yO-fN3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3jO-hL-oNS"/>
+                            <constraint firstAttribute="bottom" secondItem="EN7-yO-fN3" secondAttribute="bottom" id="l5B-PW-YbI"/>
+                            <constraint firstItem="EN7-yO-fN3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nEw-D9-nIb"/>
+                            <constraint firstItem="EN7-yO-fN3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oRB-fe-8gD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="NmR-7d-tnV"/>
+                    <navigationItem key="navigationItem" id="NmR-7d-tnV">
+                        <barButtonItem key="rightBarButtonItem" title="Refresh" id="dAe-0c-6Mi">
+                            <connections>
+                                <action selector="refreshContentWithSender:" destination="BYZ-38-t0r" id="kOd-QZ-xVF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="EN7-yO-fN3" id="fpC-ND-e2b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
