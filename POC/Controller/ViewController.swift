@@ -59,7 +59,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func loadContent() {
        spinner.startAnimating()
-        DataLoader.sharedLoader.loadContentFrom(url: "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json") { (success,error) in
+        DataLoader.sharedLoader.loadContentFrom(url: Constants.ContentURL) { (success,error) in
             self.spinner.stopAnimating()
             self.spinner.isHidden = true
             if success

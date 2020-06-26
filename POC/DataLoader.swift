@@ -53,11 +53,12 @@ final class DataLoader:NSObject {
 
     private func deSerialize(json:JSON)
     {
-        networkData = json["title"].string!
         
-        let titles = json["rows"].arrayValue.map{$0["title"].string}
-        let descriptions = json["rows"].arrayValue.map{$0["description"].string}
-        let imageUrls = json["rows"].arrayValue.map{$0["imageHref"].string}
+        networkData = json[Constants.JSONKeys.ContentTitleKey].string!
+        
+        let titles = json[Constants.JSONKeys.ContentRowKey].arrayValue.map{$0[Constants.JSONKeys.ContentTitleKey].string}
+        let descriptions = json[Constants.JSONKeys.ContentRowKey].arrayValue.map{$0[Constants.JSONKeys.DescriptionKey].string}
+        let imageUrls = json[Constants.JSONKeys.ContentRowKey].arrayValue.map{$0[Constants.JSONKeys.ImageUrlKey].string}
          let count = titles.count
         self.contents.removeAll()
         for index in 0..<count {

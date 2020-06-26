@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		723548C124A5CDFB00F2E8D5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723548C024A5CDFB00F2E8D5 /* Constants.swift */; };
 		72C8DC0224A3D7360015B648 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C8DC0124A3D7360015B648 /* AppDelegate.swift */; };
 		72C8DC0424A3D7360015B648 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C8DC0324A3D7360015B648 /* SceneDelegate.swift */; };
 		72C8DC0624A3D7360015B648 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C8DC0524A3D7360015B648 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		624257FB681C97C1C9CD31B9 /* Pods_POC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		723548C024A5CDFB00F2E8D5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		72C8DBFE24A3D7360015B648 /* POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C8DC0124A3D7360015B648 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72C8DC0324A3D7360015B648 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				72C8DC0C24A3D7370015B648 /* LaunchScreen.storyboard */,
 				72C8DC0F24A3D7370015B648 /* Info.plist */,
 				72C8DC1724A4A0090015B648 /* DataLoader.swift */,
+				723548C024A5CDFB00F2E8D5 /* Constants.swift */,
 			);
 			path = POC;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				72C8DC0624A3D7360015B648 /* ViewController.swift in Sources */,
 				72C8DC0224A3D7360015B648 /* AppDelegate.swift in Sources */,
 				72C8DC1A24A4A5910015B648 /* DisplayDetails.swift in Sources */,
+				723548C124A5CDFB00F2E8D5 /* Constants.swift in Sources */,
 				72C8DC0424A3D7360015B648 /* SceneDelegate.swift in Sources */,
 				72C8DC1C24A4A5F30015B648 /* Content.swift in Sources */,
 			);
