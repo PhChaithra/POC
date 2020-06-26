@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//All constant used in project
 struct Constants {
     static let ContentURL = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
     

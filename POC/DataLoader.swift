@@ -30,10 +30,12 @@ final class DataLoader:NSObject {
                         var json:JSON
                         if JSONSerialization.isValidJSONObject(response.data!)
                         {
+                            //If its a valid json then convert it to JSOn object
                             json = JSON(response.data!)
                         }
                         else
                         {
+                            //If not valid JSON then convert to a valid one and then convert to JSON Object
                             let string = String(decoding: response.data!, as: UTF8.self)
                             let datFromString = Data(string.utf8)
                             json = JSON(datFromString)
@@ -77,6 +79,7 @@ final class DataLoader:NSObject {
             }
             if title.count>0 || url.count>0 || desc.count>0
             {
+                //If any of the field is valid then only create one
                 let content = Content(title: title, imageURL: url, description: desc)
                 self.contents.append(content)
             }
